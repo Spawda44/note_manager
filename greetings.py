@@ -1,17 +1,11 @@
-def data_init(): # Инициализация и присваивание значений переменным
-
-  username     = input('Имя пользователя >> ')
-  content      = input('Описание заметки >> ')
-  status       = input('Статус заметки >> ')
-  title        = input('Заголовок заметки >> ')
-  created_date = input('Дата создания заметки (дд-мм-гггг) >> ')
-  issue_date   = input('Дата истечения заметки (дд-мм-гггг) >> ')
-  
-  return username, content, status, title, created_date, issue_date
+username     = 'Илья'
+title        = 'Д/З'
+content      = 'Сделать Д/З'
+status       = 'В процессе'
+created_date = '14-12-2024'
+issue_date   = '14-12-2024'
 
 def main(): # Начало программы
-
-  username, content, status, title, created_date, issue_date = data_init()
   
   print('\nВы ввели следующие данные:')
   print(f'Ваше имя: {username}')
