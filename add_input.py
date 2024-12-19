@@ -3,8 +3,8 @@ def data_init(): # Инициализация и присваивание зна
   username     = input('Имя пользователя >> ')
   content      = input('Описание заметки >> ')
   status       = input('Статус заметки >> ')
-  created_date = input('Дата создания заметки (дд-мм) >> ')
-  issue_date   = input('Дата истечения заметки (дд-мм) >> ')
+  created_date = input('Дата создания заметки (дд-мм-гггг) >> ')
+  issue_date   = input('Дата истечения заметки (дд-мм-гггг) >> ')
   
   return username, content, status, created_date, issue_date
 
@@ -29,7 +29,7 @@ def main():
   print('Заголовки заметки:', *titles)
   print(f'Описание заметки: {content}')
   print(f'Статус заметки: {status}')
-  print(f'Дата создания заметки: {created_date}')
-  print(f'Дата истечения заметки: {issue_date}')
+  print(f'Дата создания заметки: {created_date[0:5]}')
+  print(f'Дата истечения заметки: {issue_date[0:5]}')
 
 main()
