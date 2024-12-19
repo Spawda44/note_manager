@@ -3,8 +3,8 @@ def data_init(): # Запрос данных о заметке data
   username     = input('Имя пользователя >> ')
   content      = input('Описание заметки >> ')
   status       = input('Статус заметки >> ')
-  created_date = input('Дата создания заметки (дд-мм) >> ')
-  issue_date   = input('Дата истечения заметки (дд-мм) >> ')
+  created_date = input('Дата создания заметки (дд-мм-гггг) >> ')
+  issue_date   = input('Дата истечения заметки (дд-мм-гггг) >> ')
   
   return [username, content, status, created_date, issue_date]
 
@@ -30,8 +30,8 @@ def main():
     'Заголовки заметки' : note_data[5],
     'Описание заметки' : note_data[1],
     'Статус заметки' : note_data[2],
-    'Дата создания заметки' : note_data[3],
-    'Дата истечения заметки' : note_data[4]
+    'Дата создания заметки' : note_data[3][0:5],
+    'Дата истечения заметки' : note_data[4][0:5]
   }
   
   print('\nВы ввели следующие данные:')
