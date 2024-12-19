@@ -2,8 +2,8 @@ username     = 'Илья'
 title        = 'Д/З'
 content      = 'Сделать Д/З'
 status       = 'В процессе'
-created_date = '14-12'
-issue_date   = '14-12'
+created_date = '14-12-2024'
+issue_date   = '14-12-2024'
 
 def main(): # Начало программы
   
@@ -12,7 +12,7 @@ def main(): # Начало программы
   print(f'Заголовки заметки: {title}')
   print(f'Описание заметки: {content}')
   print(f'Статус заметки: {status}')
-  print(f'Дата создания заметки: {created_date}')
-  print(f'Дата истечения заметки: {issue_date}')
+  print(f'Дата создания заметки: {created_date[0:5]}')
+  print(f'Дата истечения заметки: {issue_date[0:5]}')
 
 main()
