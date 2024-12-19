@@ -4,8 +4,8 @@ def data_init(): # Инициализация и присваивание зна
   title        = input('Заголовок заметки >> ')
   content      = input('Описание заметки >> ')
   status       = input('Статус заметки >> ')
-  created_date = input('Дата создания заметки (дд-мм-гггг) >> ')
-  issue_date   = input('Дата истечения заметки (дд-мм-гггг) >> ')
+  created_date = input('Дата создания заметки (дд-мм) >> ')
+  issue_date   = input('Дата истечения заметки (дд-мм) >> ')
   
   return username, title, content, status, created_date, issue_date
 
