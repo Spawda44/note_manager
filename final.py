@@ -16,7 +16,7 @@ def title_init(): # Запрос заголовков titles
     title = input(f'Название заголовка {i+1} >> ')
     titles.append(title)
 
-  return [titles]
+  return titles
 
 # Начало программы
 
