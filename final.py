@@ -37,6 +37,6 @@ def main():
   print('\nВы ввели следующие данные:')
 
   for key, value in note.items():
-    print("{0}: {1}".format(key, value)) # Красивый вывод данных в консоль
+    print("{0}: {1}".format(key, value).replace('[','').replace(']','').replace('\'','')) # Красивый вывод данных в консоль
 
 main()
