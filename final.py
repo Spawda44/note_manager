@@ -22,15 +22,21 @@ def title_init(): # Запрос заголовков titles
 
 def main():
 
-  note = data_init()
-  note.append(title_init())
+  note_data = data_init()
+  note_data.append(title_init())
+  
+  note = {
+    'Ваше имя' : note_data[0],
+    'Заголовки заметки' : note_data[5],
+    'Описание заметки' : note_data[1],
+    'Статус заметки' : note_data[2],
+    'Дата создания заметки' : note_data[3],
+    'Дата истечения заметки' : note_data[4]
+  }
   
   print('\nВы ввели следующие данные:')
-  print(f'Ваше имя: {note[0]}')
-  print(f'Заголовки заметки: {' '.join(map(str, *note[5]))}') # Распаковка и преобразование подлиста в строку
-  print(f'Описание заметки: {note[1]}')
-  print(f'Статус заметки: {note[2]}')
-  print(f'Дата создания заметки: {note[3]}')
-  print(f'Дата истечения заметки: {note[4]}')
+
+  for key, value in note.items():
+    print("{0}: {1}".format(key, value)) # Красивый вывод данных в консоль
 
 main()
