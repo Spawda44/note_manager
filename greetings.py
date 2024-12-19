@@ -2,8 +2,8 @@ username     = 'Илья'
 title        = 'Д/З'
 content      = 'Сделать Д/З'
 status       = 'В процессе'
-created_date = '14-12-2024'
-issue_date   = '14-12-2024'
+created_date = '14-12'
+issue_date   = '14-12'
 
 def main(): # Начало программы
   
