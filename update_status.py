@@ -67,12 +67,13 @@ def main():
 
   while True: # Замена статуса
     
-    check_status = input('Хотите сменить статус? y/n >> ')
+    check_status = input('Хотите сменить статус? y/n >> \n')
     
     if check_status.lower() == 'y':
       
       note_data[4] = status_init()                    # Повторный запрос статуса
       note.update({'Статус заметки' : note_data[4]})  # Обновление словаря
+      print()
       output(note)                                    # Повторный вывод в консоль данных
       
     else:
