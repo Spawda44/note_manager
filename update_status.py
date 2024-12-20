@@ -7,7 +7,7 @@ def data_init(): # Запрос данных о заметке data
   
   return [username, content, created_date, issue_date]
 
-def status_init():
+def status_init(): # Запрос статуса заметки status
   
   status = input('Статус заметки >> ')
   
@@ -63,17 +63,17 @@ def main():
   
   print('\nВы ввели следующие данные:')
 
-  output(note)
+  output(note) # Вывод в консоль данных
 
-  while True:
+  while True: # Замена статуса
     
     check_status = input('Хотите сменить статус? y/n >> ')
     
     if check_status.lower() == 'y':
       
-      note_data[4] = status_init()
-      note.update({'Статус заметки' : note_data[4]})
-      output(note)
+      note_data[4] = status_init()                    # Повторный запрос статуса
+      note.update({'Статус заметки' : note_data[4]})  # Обновление словаря
+      output(note)                                    # Повторный вывод в консоль данных
       
     else:
       break
