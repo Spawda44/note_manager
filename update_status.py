@@ -67,7 +67,8 @@ def main():
 
   while True: # Замена статуса
     
-    check_status = input('Хотите сменить статус? y/n >> \n')
+    check_status = input('Хотите сменить статус? y/n >> ')
+    print()
     
     if check_status.lower() == 'y':
       
