@@ -1,0 +1,81 @@
+def data_init(): # Запрос данных о заметке data
+
+  username     = input('Имя пользователя >> ')
+  content      = input('Описание заметки >> ')
+  created_date = input('Дата создания заметки (дд-мм-гггг) >> ')
+  issue_date   = input('Дата истечения заметки (дд-мм-гггг) >> ')
+  
+  return [username, content, created_date, issue_date]
+
+def status_init():
+  
+  status = input('Статус заметки >> ')
+  
+  return status
+
+def title_init(): # Запрос заголовков titles
+
+  titles = []     # Инициализация листа titles
+  title = ' '     # Инициализация переменной title для дальнейшей работы с ней
+  i = 0           # Инициализация переменной i для дальнейшей работы с ней
+
+  # Пример реализации Enter-ом:
+  
+  while True:
+    title = input(f'Название заголовка {i+1}\n(Нажмите Enter для продолжения...) >> ')
+    
+    # Проверка строки title на пустоту, если строка пустая принудительно завершаем цикл
+    
+    if title != '':
+      titles.append(title)
+      i += 1
+    else:
+      break
+
+  return titles
+
+def output(note): # Красивый вывод данных в консоль с использованием .replace()
+  
+  for key, value in note.items():  
+    print("{0}: {1}".format(key, value).replace('[','').replace(']','').replace('\'',''))
+  print()
+
+# Начало программы
+
+def main():
+
+  note_data = data_init()
+  note_data.append(status_init())
+  note_data.append(title_init())
+  
+  # Итого: [0:Имя, 1:Описание, 2:дата созд, 3:дата изм, 4:статус, 5:заголовки]
+  
+  # Создание словаря с данными пользователя
+  
+  note = {
+    'Ваше имя'               : note_data[0],
+    'Заголовки заметки'      : note_data[5],
+    'Описание заметки'       : note_data[1],
+    'Статус заметки'         : note_data[4],
+    'Дата создания заметки'  : note_data[2][:5],
+    'Дата истечения заметки' : note_data[3][:5]
+  }
+  
+  print('\nВы ввели следующие данные:')
+
+  output(note)
+
+  while True:
+    
+    check_status = input('Хотите сменить статус? y/n >> ')
+    
+    if check_status.lower() == 'y':
+      
+      note_data[4] = status_init()
+      note.update({'Статус заметки' : note_data[4]})
+      output(note)
+      
+    else:
+      break
+
+main()
