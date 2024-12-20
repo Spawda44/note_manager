@@ -23,7 +23,7 @@ def title_init(): # Запрос заголовков titles
     # Проверка строки title на пустоту, если строка пустая принудительно завершаем цикл
     # Проверка строки на дубликаты в списке, если дубликат есть - не добавляем в список
     
-    if title.lower != 'стоп':
+    if title.lower() != 'стоп':
       if title.lower() not in (map(str.lower, titles)):
         titles.append(title)
         i += 1
