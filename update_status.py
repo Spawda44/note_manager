@@ -74,7 +74,6 @@ def main():
       
       note_data[4] = status_init()                    # Повторный запрос статуса
       note.update({'Статус заметки' : note_data[4]})  # Обновление словаря
-      print()
       output(note)                                    # Повторный вывод в консоль данных
       
     else:
