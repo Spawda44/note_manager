@@ -35,6 +35,8 @@ def title_init(): # Запрос заголовков titles
   return titles
 
 def output(note): # Красивый вывод данных в консоль с использованием .replace()
+
+  print('\nВы ввели следующие данные:')
   
   for key, value in note.items():  
     print("{0}: {1}".format(key, value).replace('[','').replace(']','').replace('\'',''))
@@ -61,8 +63,6 @@ def main():
     'Дата истечения заметки' : note_data[3][:5]
   }
   
-  print('\nВы ввели следующие данные:')
-
   output(note) # Вывод в консоль данных
 
   while True: # Замена статуса
