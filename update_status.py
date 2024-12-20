@@ -36,7 +36,7 @@ def title_init(): # Запрос заголовков titles
 
 def output(note): # Красивый вывод данных в консоль с использованием .replace()
 
-  print('\nВы ввели следующие данные:')
+  print('\nВы ввели следующие данные:\n')
   
   for key, value in note.items():  
     print("{0}: {1}".format(key, value).replace('[','').replace(']','').replace('\'',''))
