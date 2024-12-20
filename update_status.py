@@ -22,20 +22,25 @@ def title_init(): # Запрос заголовков titles
   # Пример реализации Enter-ом:
   
   while True:
-    title = input(f'Название заголовка {i+1}\n(Нажмите Enter для продолжения...) >> ')
+
+    title = str(input(f'Название заголовка {i+1} - [Enter] продолжить >> '))
     
     # Проверка строки title на пустоту, если строка пустая принудительно завершаем цикл
+    # Проверка строки на дубликаты в списке, если дубликат есть - не добавляем в список
     
     if title != '':
-      titles.append(title)
-      i += 1
+      if title.lower() not in (map(str.lower, titles)):
+        titles.append(title)
+        i += 1
+      else:
+        print('Обнаружен дубликат! Удаление...\n')
     else:
       break
 
   return titles
 
 def output(note): # Красивый вывод данных в консоль с использованием .replace()
-
+  
   print('\nВы ввели следующие данные:\n')
   
   for key, value in note.items():  
@@ -62,7 +67,7 @@ def main():
     'Дата создания заметки'  : note_data[2][:5],
     'Дата истечения заметки' : note_data[3][:5]
   }
-  
+
   output(note) # Вывод в консоль данных
 
   while True: # Замена статуса
