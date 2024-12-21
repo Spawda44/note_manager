@@ -1,6 +1,6 @@
 def data_init(): # Запрос данных о заметке data
 
-  username     = input('Имя пользователя >> ')
+  username     = input('\nИмя пользователя >> ')
   content      = input('Описание заметки >> ')
   created_date = input('Дата создания заметки (дд-мм-гггг) >> ')
   issue_date   = input('Дата истечения заметки (дд-мм-гггг) >> ')
@@ -8,8 +8,22 @@ def data_init(): # Запрос данных о заметке data
   return [username, content, created_date, issue_date]
 
 def status_init(): # Запрос статуса заметки status
+  while True:
+    print('\nСтатус заметки:\n1 - В процессе\n2 - Выполнено\n3 - Отложено')
   
-  status = input('Статус заметки >> ')
+    status = input('Выберите пункт 1-3 >> ')
+  
+    if status == '1':
+      status = 'В процессе'
+      break
+    elif status == '2':
+      status = 'Выполнено'
+      break
+    elif status == '3':
+      status = 'Отложено'
+      break
+    else:
+      print('\nТакого статуса не существует\n')
   
   return status
 
@@ -23,7 +37,7 @@ def title_init(): # Запрос заголовков titles
   
   while True:
 
-    title = str(input(f'Название заголовка {i+1} - [Enter] продолжить >> '))
+    title = str(input(f'\nНазвание заголовка {i+1} - [Enter] продолжить >> '))
     
     # Проверка строки title на пустоту, если строка пустая принудительно завершаем цикл
     # Проверка строки на дубликаты в списке, если дубликат есть - не добавляем в список
