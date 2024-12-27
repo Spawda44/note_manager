@@ -195,7 +195,7 @@ def build_note(notes):
 def output(notes):
     for note in notes:
         # Выводим заголовок
-        print(f'\n{"="*50}\n📝 Заметка #{len(notes)}:\n{"="*50}')
+        print(f'\n{"="*50}\n📝 Заметка #{notes.index(note)+1}:\n{"="*50}')
     
         # Выводим данные в виде таблицы
         for key, value in note.items():
