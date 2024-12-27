@@ -205,7 +205,6 @@ def output(notes):
 
 # Функция замены статуса
 def change_status(notes):
-
     while True:
         # Получаем номер заметки
         note_number = int(input(f'\n📝 Введите номер заметки (1-{len(notes)})>> '))
