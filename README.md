@@ -9,14 +9,14 @@
 # <a href="https://github.com/Spawda44/note_manager/blob/main/add_titles_loop.py" target="_blank">add_titles_loop.py</a>:
 Добавлена возможность бесконечно добавлять ЗАГОЛОВКИ заметке, с помощью цикла while и остановке этого цикла простым нажатием Enter
 
-# update_status.py:
+# <a href="https://github.com/Spawda44/note_manager/blob/main/update_status.py" target="_blank">update_status.py</a>:
 Добавлена возможность сменить статус заметки после её создания, реализовано отдельной функцией
 
-# check_deadline.py:
+# <a href="https://github.com/Spawda44/note_manager/blob/main/check_deadline.py" target="_blank">check_deadline.py</a>:
 Добавлена функция проверки дедлайна, функция сравнивает между собой дату создания заметки и дату дедлайна, и в отдельную строку выводить сколько дней осталось
 
-# multiple_notes.py:
+# <a href="https://github.com/Spawda44/note_manager/blob/main/multiple_notes.py" target="_blank">multiple_notes.py</a>:
 Добавлена функция создания ещё множества заметок, каждая из них добавляется в отдельный список, с которым удобно работать
 
-# delete_notes.py:
+# <a href="https://github.com/Spawda44/note_manager/blob/main/delete_notes.py" target="_blank">delete_notes.py</a>:
 Добавлена функция удаления заметок с указанием их номера, номера заметок указываются при выводе, так что пользователю не нужно гадать, что бы найти именно ту, что ему нужна
