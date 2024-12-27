@@ -82,7 +82,7 @@ def data_init():
 # Функция инициализации дат
 def date_init():
     # Преобразуем эту дату в единый формат DD-MM-YYYY
-    normalize_date = lambda data: data.str.replace(".", "-").replace("/", "-")
+    normalize_date = lambda data: data.replace(".", "-").replace("/", "-")
     # Получаем дату создания и дату дедлайна
     while True:
         issue_date_str = normalize_date(input("\n🗓️  Введите дату дедлайна заметки (дд-мм-гггг) >>"))
