@@ -245,4 +245,7 @@ def delete_note(notes):
 
 # Старт программы
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        print('\n⚠️  Программа завершена аварийно.')
