@@ -22,18 +22,18 @@
 
 # Этап 3
 
-# <a href="https://github.com/Spawda44/note_manager/blob/main/create_note_function.py" target="_blank">add_titles_loop.py</a>:
+# <a href="https://github.com/Spawda44/note_manager/blob/main/create_note_function.py" target="_blank">create_note_function.py</a>:
 Создана функция сбора данных от пользователя и сборки заметки
 
-# <a href="https://github.com/Spawda44/note_manager/blob/main/update_note_function.py" target="_blank">add_titles_loop.py</a>:
+# <a href="https://github.com/Spawda44/note_manager/blob/main/update_note_function.py" target="_blank">update_note_function.py</a>:
 Создана функция для изменения данных существующей заметки
 
-# <a href="https://github.com/Spawda44/note_manager/blob/main/display_notes_function.py" target="_blank">add_titles_loop.py</a>:
+# <a href="https://github.com/Spawda44/note_manager/blob/main/display_notes_function.py" target="_blank">display_notes_function.py</a>:
 Создана функция для вывода всех заметок в консоль
 
-# <a href="https://github.com/Spawda44/note_manager/blob/main/search_notes_function.py" target="_blank">add_titles_loop.py</a>:
+# <a href="https://github.com/Spawda44/note_manager/blob/main/search_notes_function.py" target="_blank">search_notes_function.py</a>:
 Создана функция для поиска заметок по ключевым словам
 
-# <a href="https://github.com/Spawda44/note_manager/blob/main/menu.py" target="_blank">add_titles_loop.py</a>:
+# <a href="https://github.com/Spawda44/note_manager/blob/main/menu.py" target="_blank">menu.py</a>:
 Создана функция меню для выбора конкретных действий с заметками и выхода из программы
 
